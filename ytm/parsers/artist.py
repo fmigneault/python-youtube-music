@@ -348,6 +348,9 @@ def artist(data: dict) -> dict:
         if shelf_identifier in shelf_identifier_map:
             shelf_identifier = shelf_identifier_map[shelf_identifier]
 
+        if shelf_identifier == 'artist-made_playlists':
+            continue
+
         if shelf_identifier == 'singles_&_eps':
             continue  # already handled by songs and/or album-specific EPs
 
