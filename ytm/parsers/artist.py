@@ -145,6 +145,8 @@ def artist(data: dict) -> dict:
     {
         'featured_on':          'playlists',
         'fans_might_also_like': 'similar_artists',
+        'playlists_by_volumes': 'playlists',
+        'live_performances':    'videos',
     }
 
     for shelf_identifier in shelf_identifiers:
