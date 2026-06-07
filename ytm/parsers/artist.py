@@ -145,6 +145,7 @@ def artist(data: dict) -> dict:
     {
         'featured_on':          'playlists',
         'fans_might_also_like': 'similar_artists',
+        'live_performances':    'videos',
     }
 
     for shelf_identifier in shelf_identifiers:
@@ -349,6 +350,10 @@ def artist(data: dict) -> dict:
             shelf_identifier = shelf_identifier_map[shelf_identifier]
 
         if shelf_identifier == 'artist-made_playlists':
+            continue
+        if shelf_identifier.startswith('playlists_by_'):
+            # identifier include the name of the artist for their custom lists
+            # omit the artist name altogether to avoid format failing matching it
             continue
 
         if shelf_identifier == 'singles_&_eps':
