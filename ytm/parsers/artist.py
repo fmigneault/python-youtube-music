@@ -362,7 +362,7 @@ def artist(data: dict) -> dict:
         if shelf_identifier not in shelf_identifiers:
             raise Exception \
             (
-                f'Unrecognised sheld identifier: {repr(shelf_identifier)}'
+                f'Unrecognised shelf identifier: {repr(shelf_identifier)}'
             )
 
         for shelf_item in shelf_contents:
